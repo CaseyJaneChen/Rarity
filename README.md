@@ -1,5 +1,5 @@
 # Rarity
-The Python package generated for the following academic paper:
+The Python package is generated for the following academic paper:
 
 Alexander, C. and Chen, X. Rarity Metrics for Non-Fungible Token Collections. 
 
