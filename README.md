@@ -1,5 +1,6 @@
 # Rarity
 The Python package generated for the following academic paper:
+
 Alexander, C. and Chen, X. Rarity Metrics for Non-Fungible Token Collections. 
 
 Given any collection address, the package downloads the metadata and computes different rarity scores and rankings (w/o padding or trait normalization), checks for trait independence, and generates informative new types of visual tools.
