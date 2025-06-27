@@ -75,7 +75,7 @@ def fetch_collection_metadata(contract_address, ALCHEMY_API_KEY, output = False,
                 }
                 all_nfts.append(row)
                 if collection_name == None:
-                    collection_name = nft['contract']['name'] + '_Adress_' + nft['contract']['address']
+                    collection_name = nft['contract']['name'] + '_Address_' + nft['contract']['address']
             except:
                 pass
         
