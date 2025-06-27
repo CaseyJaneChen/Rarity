@@ -91,6 +91,7 @@ def fetch_collection_metadata(contract_address, ALCHEMY_API_KEY, output = False,
     if output:
         if not df.empty:
             filename = '/' + collection_name.replace('/','|') + '_metadata.csv'
+            df.to_csv(path + filename)
             print(f"✅ Saved {len(df)} NFTs in {filename}")
         else:
             print('No tokens found!')
