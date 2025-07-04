@@ -56,9 +56,9 @@ class rarity():
     def rarity_metrics_calc(self):
         attr_prob = self.attr_prob.copy()
         rarity_metrics = pd.DataFrame(index = attr_prob.index)
-        rarity_metrics['Harmonic_value'] = len(attr_prob.columns)/(attr_prob**(-1)).sum(axis=1)
-        rarity_metrics['Geometric_value'] = (attr_prob**(1/len(attr_prob.columns))).prod(axis=1)
-        rarity_metrics['Arithmetic_value'] = attr_prob.sum(axis=1)/len(attr_prob.columns)
+        rarity_metrics['Harmonic_value'] = attr_prob.count(axis=1)/((attr_prob**(-1)).sum(axis=1))
+        rarity_metrics['Geometric_value'] = (attr_prob.prod(axis=1))**(1/attr_prob.count(axis=1))
+        rarity_metrics['Arithmetic_value'] = attr_prob.sum(axis=1)/attr_prob.count(axis=1)
         rarity_metrics['max-min'] = attr_prob.max(axis=1) - attr_prob.min(axis=1)
         
         metadata = self.metadata.copy()
